@@ -1,3 +1,9 @@
+  <div class="digg_pagination">
+  
+    <%= will_paginate @places, :container => false %>
+  
+  </div>
+
 <% @places.each do |place| %>
 
   <div class="booyah-box col-10 offset-1">
