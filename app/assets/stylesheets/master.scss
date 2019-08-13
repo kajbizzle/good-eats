@@ -12,7 +12,17 @@
   padding: 20px;
 }
 
+.navbar {
+  background: image_url('moulin.png');
+  box-shadow: 0px 1px 3px #2a2a2a;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin:0;
   padding:0;
+}
+
+body {
+  background: image_url('email-pattern.png');
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 }
