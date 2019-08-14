@@ -77,3 +77,6 @@ gem 'will_paginate', '>= 3.0'
 
 #Font Awesome
 gem 'font-awesome-rails'
+
+#User Authentication
+gem 'devise'
