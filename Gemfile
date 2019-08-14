@@ -73,5 +73,7 @@ source 'https://rails-assets.org' do
 end
 
 # Pagination
-
 gem 'will_paginate', '>= 3.0'
+
+#Font Awesome
+gem 'font-awesome-rails'
