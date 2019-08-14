@@ -20,6 +20,12 @@ class PlacesController < ApplicationController
 
   end
 
+  def show
+
+    @place = place.find(params[:id])
+
+  end
+
   private
 
   def place_params
