@@ -22,7 +22,13 @@ class PlacesController < ApplicationController
 
   def show
 
-    @place = place.find(params[:id])
+    @place = Place.find(params[:id])
+
+  end
+
+  def edit
+
+    @place = Place.find(params[:id])
 
   end
 
