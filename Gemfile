@@ -72,7 +72,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
 
-# Pagination
+#Pagination
 gem 'will_paginate', '>= 3.0'
 
 #Font Awesome
@@ -80,3 +80,9 @@ gem 'font-awesome-rails'
 
 #User Authentication
 gem 'devise'
+
+#Geocode for location services
+gem 'geocoder'
+
+#Figaro for storing environment variables
+gem 'figaro'
