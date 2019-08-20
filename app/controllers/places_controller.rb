@@ -76,4 +76,11 @@ class PlacesController < ApplicationController
 
   end
 
+  def photo
+
+    @place = Place.find(params[:id])
+    @photo = Caption.new
+
+  end
+
 end
