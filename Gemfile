@@ -86,3 +86,9 @@ gem 'geocoder'
 
 #Figaro for storing environment variables
 gem 'figaro'
+
+#Photo Uploads
+gem 'carrierwave', '~> 1.0'
+
+#Fog-AWS
+gem 'fog-aws'
