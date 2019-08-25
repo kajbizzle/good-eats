@@ -36,6 +36,9 @@
 
   <div class="float-right">
     <% if current_user && current_user == @place.user %>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myPhotoModal">
+      Add a Photo/Caption
+    </button>
       <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
       <%= link_to 'Delete', place_path(@place), method: :delete, data: {confirm: 'Are you certain that you want to delete this place?'}, class: 'btn btn-danger' %>
     <% end %>
@@ -92,14 +95,34 @@
   <% end %>
 </div>
 
-<% if current_user && current_user == @place.user %>
-  <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
-    <%= f.input :caption %>
-    <%= f.input :picture %>
-    <%= f.submit "Add a Caption", class: 'btn btn-primary' %>
-  <% end %>
-<% end %>
+  <!-- Photo Modal -->
+  <div class="modal fade" id="myPhotoModal" tabindex="-1" role="dialog" aria-labelledby="myPhotoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+          <h4 class="modal-title" id="myPhotoModalLabel">Add a Photo/Caption</h4>
+        </div>
+          <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+          <div class="modal-body">
+            <%= f.input :caption %>
+            <%= f.input :picture %>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <%= f.submit "Save", class: 'btn btn-primary' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
+<div class="clear"></div>
+
+<div class="col-10 offset-1">
+  <h1 class="float-left">Photos & Captions</h1>
 
 <div class="clear"></div>
 
@@ -114,4 +137,5 @@
       </blockquote>
     </div>
   <% end %>
+</div>
 </div>
