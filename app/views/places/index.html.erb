@@ -66,9 +66,10 @@
     </div>
 <% end %>
 
+
 <% if place.photos.present? %>
-    <div class="col-12 col-sm-6">
-      <%= image_tag place.photos.first.picture.to_s %>
+    <div class="col-12 col-sm-6" >
+      <%= image_tag place.photos.first.picture.to_s, class: 'caption-photo-img'%>
     </div>
     <% end %>
 
