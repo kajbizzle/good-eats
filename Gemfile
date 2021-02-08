@@ -88,7 +88,7 @@ gem 'geocoder'
 gem 'figaro'
 
 #Photo Uploads
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 
 #Fog-AWS
 gem 'fog-aws'
